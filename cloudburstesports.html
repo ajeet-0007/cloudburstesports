@@ -397,7 +397,7 @@
     </div>
     
     <div class="container " id="ajeet">
-        <form>
+        <form method="GET">
             <br>
             <br>
             <label for="">IF YOU HAVE SERIOUS TALENT IN GAMING SHARE WITH US</label>
@@ -444,16 +444,15 @@
             social_links.classList.toggle("v-class");
         });
         window.addEventListener("load", function() {
-  document.getElementById("mailtolink").addEventListener("click", function(e) {
+  document.getElementById("mailtolink").addEventListener("click", function(){
     let url = new URL(this.href);
     const name = document.querySelector("[name=youremail]").value;
     const email = document.querySelector("[name=yournumber]").value;
     
     url.searchParams.set("from", email);
     url.searchParams.set("subject", "Message from " + (document.title || location.hostname))
-    url.searchParams.set("body", name + " said " + message)
+    url.searchParams.set("body", name + " said " + email)
     this.href=url;
-    console.log(url)
   })
 });
     </script>
