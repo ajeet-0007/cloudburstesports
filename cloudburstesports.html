@@ -446,8 +446,8 @@
         window.addEventListener("load", function() {
   document.getElementById("mailtolink").addEventListener("click", function(e) {
     let url = new URL(this.href);
-    const name = document.querySelector("[name=youremail]").value.trim();
-    const email = document.querySelector("[name=yournumber]").value.trim();
+    const name = document.querySelector("[name=youremail]").value;
+    const email = document.querySelector("[name=yournumber]").value;
     
     url.searchParams.set("from", email);
     url.searchParams.set("subject", "Message from " + (document.title || location.hostname))
