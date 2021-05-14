@@ -414,7 +414,7 @@
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Share your achievements with us</label>
-                <input type="yourmessage" class="form-control" id="exampleInputPassword1">
+                <input type="yourmessage" name="yourmessage" class="form-control" id="exampleInputPassword1">
               </div>
             <div class="mb-3 form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -448,10 +448,10 @@
     let url = new URL(this.href);
     const name = document.querySelector("[name=youremail]").value;
     const email = document.querySelector("[name=yournumber]").value;
-    
+    const ymessage = document.querySelector("[name=yourmessage]").value;
     url.searchParams.set("from", email);
     url.searchParams.set("subject", "Message from " + (document.title || location.hostname))
-    url.searchParams.set("body", name + " said " + email)
+    url.searchParams.set("body", name + " said " + email+" message "+ ymessage)
     this.href=url;
   })
 });
