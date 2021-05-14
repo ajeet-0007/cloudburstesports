@@ -451,7 +451,7 @@
     const ymessage = document.querySelector("[name=yourmessage]").value;
     url.searchParams.set("from", email);
     url.searchParams.set("subject", "Message to " + (document.title || location.hostname))
-    url.searchParams.set("body", name + " said " + email+" message ", ymessage)
+    url.searchParams.set("body", name + " said " + email+" message "+ ymessage)
     this.href=url;
   })
 });
